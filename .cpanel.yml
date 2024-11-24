@@ -3,8 +3,6 @@ deployment:
   tasks:
     - export DEPLOY_PATH=/home/h287930/public_html
     - echo "Starting deployment..."
-    - echo "Pulling latest changes..."
-    - /bin/git pull
     - echo "Copying files to the deployment directory..."
     - rsync -av --exclude='.git' . $DEPLOY_PATH
     - echo "Deployment complete!"
