@@ -4,6 +4,5 @@ deployment:
     - export DEPLOY_PATH=/home/h287930/public_html
     - echo "Starting deployment..."
     - echo "Copying files to the deployment directory..."
-    - /bin/cp index.html $DEPLOY_PATH
-    - rsync -av --exclude='.git' . $DEPLOY_PATH
+    - /bin/rsync -av --exclude='.git' . $DEPLOY_PATH
     - echo "Deployment complete!"
